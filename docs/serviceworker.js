@@ -3,8 +3,8 @@ const basePath = '/pwa-vanilla-nextjs';
 const cacheName = 'pwa-vanilla-nextjs-assets';
 // const urlsToCache = [`${basePath}/vercel.svg`, `${basePath}/pic01.png`];
 // const urlsToCache = [`http://localhost:3000/pwa-vanilla-nextjs/vercel.svg`, `http://localhost:3000/pwa-vanilla-nextjs/pic01.png`];
-const urlsToCache = [`/pwa-vanilla-nextjs/vercel.svg`, `/pwa-vanilla-nextjs/pic01.png`];
-// const urlsToCache = [`vercel.svg`, `pic01.png`];
+// const urlsToCache = [`/pwa-vanilla-nextjs/vercel.svg`, `/pwa-vanilla-nextjs/pic01.png`];
+const urlsToCache = [`vercel.svg`, `pic01.png`];
 
 
 console.log('serviceworker.js is executed');

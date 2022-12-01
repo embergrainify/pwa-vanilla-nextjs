@@ -13,7 +13,8 @@ const test2 = () => {
   console.log('test2');
   const container = document.getElementById('container');
   const img = document.createElement('img');
-  img.src = `${process.env.basePath}/pic01.png`;
+  // img.src = `${process.env.basePath}/pic01.png`;
+  img.src = `http://localhost:3000/pwa-vanilla-nextjs/pic01.png`;
   container?.appendChild(img);
 }
 
@@ -37,7 +38,10 @@ export default function Home() {
         //         .catch(err => console.log('serviceworker failed to register', err));
         // });
 
-        navigator.serviceWorker.register(`${process.env.basePath}/serviceworker.js`, {scope: `${process.env.basePath}/`})
+        // SCOPE https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register
+        // navigator.serviceWorker.register(`${process.env.basePath}/serviceworker.js`, {scope: `${process.env.basePath}/`})
+        // SAME AS
+        navigator.serviceWorker.register(`${process.env.basePath}/serviceworker.js`)
           .then(reg => console.log('serviceworker registered', reg))
           .catch(err => console.log('serviceworker failed to register', err));
 
@@ -77,7 +81,9 @@ export default function Home() {
         <button className="rounded-lg px-8 py-2 bg-green-600 text-gray-100" onClick={test2}>Test2</button>
         <img src={`${process.env.basePath}/vercel.svg`} />
         <div className='w-64 h-64 bg-slate-400'>
-          <img src={`${process.env.basePath}/pic01.png`} />
+          {/* <img src={`${process.env.basePath}/pic01.png`} /> */}
+          <img src={`http://localhost:3000/pwa-vanilla-nextjs/pic01.png`} />
+          
         </div>
       </div>
     </div>
